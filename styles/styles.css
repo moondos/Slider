@@ -358,6 +358,7 @@ div {
 
 .projects-block__mob {
     position: relative;
+    z-index: 1;
 }
 
 .projects-buttons__mob {
@@ -599,7 +600,7 @@ div {
     margin-top: 39px;
     display: flex;
     align-items: center;
-    justify-content:space-between ;
+    justify-content:space-between;
 }
 
 input[type="checkbox"] {
@@ -739,6 +740,7 @@ input[type="checkbox"]:checked:after {
         color: white;
     }
     .checkbox-first {
+        width: 95%;
         margin-top: 0;
     
     }
@@ -1311,7 +1313,6 @@ input[type="checkbox"]:checked:after {
         height: 1216px;
         background-color: #000000;
         background-image: none;
-        z-index: -3;
         padding-top: 150px;
         margin-top: -115px;
     }
@@ -1319,10 +1320,10 @@ input[type="checkbox"]:checked:after {
         display: none;
     }
     .address-question {
-    position: static;
-    width: 100%;
-    height: 475px;
-    background-color: black;
+        position: static;
+        width: 100%;
+        height: 475px;
+        background-color: black;
     }
     .question-form1 {
         display: block;
@@ -1351,6 +1352,11 @@ input[type="checkbox"]:checked:after {
     }
     .address-image {
         display: none;
+    }
+    .address-image__mob img {
+        width: 100%;
+        max-width: 340px;
+
     }
     .address-title {
         width: 100%;
