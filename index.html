@@ -25,7 +25,7 @@
                     <li class="header-navigation__item"><a href="#">CONTACTS</a></li>
                 </ul>
             </nav>
-            <a class="phone" href="+7 (928) 768-32-39">+7 (928) 768-32-39</a>
+            <a class="phone" href="tel:+7 (928) 768-32-39">+7 (928) 768-32-39</a>
             <button class="button header-button">REQUEST A CALL</button>
         </div>
     </header>
@@ -83,7 +83,14 @@
                             </div>
                             
                         </div>
-                        <img src="./images/arrows.svg" alt="" class="arrows">
+                        
+                        <div class="projects-navigation">
+                            <img src="./images/arrow_left.svg" alt="left arrow" class="arrow-left">
+                            <span class="projects-navigation-item"></span>
+                            <span class="projects-navigation-item"></span>
+                            <span class="projects-navigation-item"></span>
+                            <img src="./images/arrow_right.svg" alt="right arrow" class="arrow-right">
+                        </div>
                     </div>
                     <img src="./images/image 2.1.jpg" alt="rostov-on-don,admiral" class="projects-image">
                 </div>
@@ -108,19 +115,20 @@
                 <p class="oc-text">At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities! 
                     <br/> Leave a request below and you will receive a link to the broadcast.</p>
                 <form action="" class="customer-form">
-                    <label for="name" class="customer-label">Name<br/>
-                        <input type="text" class="customer-input" value="What is your name:">
+                    <label class="customer-label">Name<br/>
+                        <input type="text" class="customer-input" placeholder="What is your name:">
                     </label>
-                    <label for="phone" class="customer-label">Phone<br/>
-                        <input type="text" class="customer-input" value="Your phone number:">
+                    <label class="customer-label">Phone<br/>
+                        <input type="text" class="customer-input" placeholder="Your phone number:">
                     </label>
                     <button class="button button-f_submit">submit</button>
+                    <div class="checkbox checkbox-first">
+                        <input type="checkbox" class="checkbox" id="check">
+                        <label for="check" class="checkbox-label">I agree to the processing of personal data.</label>
+                    </div>
                 </form>
-                <div class="checkbox checkbox-first">
-                    <input type="checkbox" class="checkbox" id="check">
-                    <label for="check" class="checkbox-label">I agree to the processing of personal data.</label>
-                </div>
                 
+                <button class="button button-submit__mob">Submit</button>
             </div>
         </section>
         <section class="repair">
@@ -133,7 +141,8 @@
                 </div>
                 <div class="repair-content">
                     <div class="contentbox">
-                        <img src="./images/image_4.1.jpg" alt="bluewall">
+                        <img class="repair-image" src="./images/image_4.1.jpg" alt="bluewall">
+                        <img class="repair-image__mob" src="./images/image_4.1__mob.jpg" alt="bluewall">
                         <div class="contentbox-wrapper">
                             <div class="contentbox-item">
                                 <p class="headline item-name">Redecorating</p>
@@ -151,7 +160,8 @@
                         </div>
                     </div>
                     <div class="contentbox">
-                        <img src="./images/image_4.2.jpg" alt="bluewall">
+                        <img class="repair-image" src="./images/image_4.2.jpg" alt="orange curtain">
+                        <img class="repair-image__mob" src="./images/image_4.2__mob.jpg" alt="orange curtain">
                         <div class="contentbox-wrapper">
                             <div class="contentbox-item">
                                 <p class="headline item-name">Overhaul</p>
@@ -169,7 +179,8 @@
                         </div>
                     </div>
                     <div class="contentbox">
-                        <img src="./images/image_4.3.jpg" alt="bluewall">
+                        <img class="repair-image" src="./images/image_4.3.jpg" alt="black wall">
+                        <img class="repair-image__mob" src="./images/image_4.3__mob.jpg" alt="black wall">
                         <div class="contentbox-wrapper">
                             <div class="contentbox-item">
                                 <p class="headline item-name">Designer Repair</p>
@@ -203,14 +214,14 @@
                         <div class="request-form__wrapper">
                             <form action="" class="request-form">
                                 <p class="request-form__header">Leave a request for free<br>departure of the measurer</p>
-                                <label for="name" class="request-label">Name<br/>
-                                    <input type="text" class="request-input" value="What is your name:">
+                                <label class="request-label">Name<br/>
+                                    <input type="text" class="request-input" placeholder="What is your name:">
                                 </label>
-                                <label for="phone" class="request-label">Phone<br/>
-                                    <input type="text" class="request-input" value="Your phone number:">
+                                <label class="request-label">Phone<br/>
+                                    <input type="text" class="request-input" placeholder="Your phone number:">
                                 </label>
-                                <label for="email" class="request-label">Email<br/>
-                                    <input type="text" class="request-input" value="Your email">
+                                <label class="request-label">Email<br/>
+                                    <input type="text" class="request-input" placeholder="Your email">
                                 </label>
                                 <div class="checkbox checkbox-second">
                                     <input type="checkbox" class="checkbox" id="check2">
@@ -232,6 +243,17 @@
         </section>
         <section class="fantasies">
             <div class="container fantasies-container">
+                <div class="fantasies-content__mob">
+                    <h2 class="headline fantasies-headline__mob">We realize your wildest fantasies</h2>
+                    <div class="projects-block__mob">
+                        <img class="backstage" src="./images/image_6.1__mob.jpg" alt="slider">
+                        <div class="projects-buttons__mob">
+                            <button class="button projects-button"><img src="./images/left.svg" alt="."></button>
+                            <button class="button projects-button"><img src="./images/right.svg" alt="."></button>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="fantasies-content">
                     <h2 class="headline fantasies-headline">We realize your wildest fantasies</h2>
                         <ul class="fantasies-list">
@@ -340,16 +362,14 @@
                 <div class="address-question">
                     <h2 class="headline question-headline">have any questions?</h2>
                     <form action="" class="question-form1">
-                        <label for="name" class="request-label question-label">Name<br/>
-                            <input type="text" class="request-input question-input" value="What is your name:">
+                        <label class="request-label question-label">Name<br/>
+                            <input type="text" class="request-input question-input" placeholder="What is your name:">
                         </label>
-                        <label for="phone" class="request-label question-label">Phone<br/>
-                            <input type="text" class="request-input question-input" value="Your phone number:">
+                        <label class="request-label question-label">Phone<br/>
+                            <input type="text" class="request-input question-input" placeholder="Your phone number:">
                         </label>
-                    </form>
-                    <form action="" class="question-form2">
-                        <label for="question" class="request-label question-label">Question<br/>
-                            <input type="text" class="request-input question-input" value="I want to know">
+                        <label class="request-label question-label__long">Question<br/>
+                            <input type="text" class="request-input question-input" placeholder="I want to know">
                         </label>
                         <div class="checkbox-second checkbox-third">
                             <input type="checkbox" class="checkbox" id="check3">
@@ -357,6 +377,9 @@
                         </div>
                         <button class="button button-question">submit</button>
                     </form>
+                </div>
+                <div class="address-image__mob">
+                    <img src="./images/image_7.1__mob.jpg" alt="how can you find us">
                 </div>
                 <h3 class="address-title">Rostov-on-Don, Nansen St., 239 Shopping Center<br> Decorum Tel +7 (928) 768 32 29</h3>
                 <div class="address-buttons">
@@ -386,7 +409,7 @@
                     <li class="header-navigation__item"><a href="#">CONTACTS</a></li>
                 </ul>
             </nav>
-            <a class="phone" href="+7 (928) 768-32-39">+7 (928) 768-32-39</a>
+            <a class="phone" href="tel:+7 (928) 768-32-39">+7 (928) 768-32-39</a>
             <button class="button footer-button">REQUEST A CALL</button>
         </div>
     </footer>
