@@ -1,0 +1,2 @@
+# Slider
+SkillFactory Project JavaScript
