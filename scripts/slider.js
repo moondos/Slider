@@ -28,8 +28,8 @@ const time = document.querySelectorAll('.projects-data')[2];
 const items = document.querySelectorAll('.projects-photos__item a');
 const prev = document.querySelector('.btn-left');
 const next = document.querySelector('.btn-right');
-const prev_mob = document.getElementsByClassName('projects-button')[0];
-const next_mob = document.getElementsByClassName('projects-button')[1];
+const prev_mob = document.querySelectorAll('.projects-button')[0];
+const next_mob = document.querySelectorAll('.projects-button')[1];
 const dots = document.querySelectorAll('.projects-navigation-item');
 
 let currentIndex = 0;
@@ -42,12 +42,16 @@ const setEntity = (index) => {
 	time.innerHTML = entities[index].time;
 	img.src = entities[index].img;
     img_mob.src = entities[index].img;
+};
 
+// Changing active name
+const activeItem = (items, index) => {
 	items.forEach((item) => {
 		item.classList.remove('item-active');
 	});
 	items[index].classList.add('item-active');
 };
+
 
 // Changing the dots' color
 const activeDot = (dots, dot) => {
@@ -66,6 +70,7 @@ function prevImg() {
 		currentIndex -= 1;
 	}
 	setEntity(currentIndex);
+	activeItem(items, currentIndex);
 	activeDot(dots, dots[currentIndex]);
 }
 
@@ -76,6 +81,7 @@ function nextImg() {
 		currentIndex += 1;
 	}
 	setEntity(currentIndex);
+	activeItem(items, currentIndex);
 	activeDot(dots, dots[currentIndex]);
 }
 
@@ -89,6 +95,7 @@ items.forEach((item, i) => {
 	item.addEventListener('click', () => {
 		currentIndex = i;
 		setEntity(currentIndex);
+		activeItem(items, currentIndex);
 		activeDot(dots, dots[currentIndex]);
 	});
 });
@@ -99,5 +106,6 @@ dots.forEach((dot, i) => {
 		activeDot(dots, dot);
 		currentIndex = i;
 		setEntity(currentIndex);
+		activeItem(items, currentIndex);
 	});
 });
